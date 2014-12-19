@@ -20,4 +20,8 @@ class IdeaStore
   def self.next_id
     count + 1
   end
+
+  def self.delete_all
+    @all.clear
+  end
 end

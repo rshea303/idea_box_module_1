@@ -5,6 +5,9 @@ require './lib/ideabox/idea'
 require './lib/ideabox/idea_store'
 
 class IdeaStoreTest < Minitest::Test
+  def teardown
+    IdeaStore.delete_all
+  end
 
   def test_save_and_retrieve_an_idea
     idea = Idea.new("celebrate", "with champagne")
