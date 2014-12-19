@@ -10,11 +10,11 @@ class IdeaStore
   end
 
   def self.count
-    @all.count
+    all.count
   end
 
   def self.find(id)
-    @all.find do |idea|
+    all.find do |idea|
       idea.id == id
     end
   end
